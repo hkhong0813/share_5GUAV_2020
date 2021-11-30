@@ -11,7 +11,6 @@ argvar = vars(args.parse_args())
 
 
 def mul():
-    print(argvar['first'])
     return argvar['first'] * argvar['second']
     
 
