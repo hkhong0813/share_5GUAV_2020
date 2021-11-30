@@ -35,33 +35,32 @@ args.add_argument('-first', type=int, default=49, required='True')
 args.add_argument('-second', type=int, default=30,  required='True')
 args.add_argument('-third', type=int, default=0, required='True')
 
-def multi(a,b):
-    val = a * b
+def multi(a,b,c):
+    val = a * b * c
     return val
 
-def div(a,b):
-    val = a / b
+def div(a,b,c):
+    val = a / b /c
     return val
 
 
 if __name__ == '__main__':
     try:
         arg_var = vars(args.parse_args())
-        print(arg_var)
+       
         a = arg_var.get('first')
         b = arg_var.get('second')
         c = arg_var.get('third')
 
-        print("first * second = " + multi(a,b))
-        print("second * third = " + multi(b,c))
-        print("first / second = " + div(a,b))
-        print("second / third = " + div(b,c))
+        print("first * second * third = ", multi(a,b,c))
+        print("first / second / third = ", div(a,b,c))
+        
         
 
     except Exception as e: 
         print("뭔가 오류가 있어요!!!")
     
-    
+
     finally:
         pass
 
