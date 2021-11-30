@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser(description="Argeparse Tutorial")
+parser = argparse.ArgumentParser(description="Argparse Tutorial")
 
 # args.add_argument('-q','--quit',required=True)
 parser.add_argument('-x', type=int)
