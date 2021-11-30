@@ -58,7 +58,7 @@ if __name__ == '__main__':
         
 
     except Exception as e: 
-        print("뭔가 오류가 있어요!!!")
+        print(e, "  라는 오류가 있어요!!!")
     
 
     finally:
