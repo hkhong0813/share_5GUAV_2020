@@ -31,6 +31,8 @@ if __name__ == '__main__':
         print('put num')
     except ZeroDivisionError:
         dev123 = devision(first,second)
+    except:
+        print('error')
     finally:
         print('first*second = ',mult_dd)
         print('first*second*third = ',mult_tp)
