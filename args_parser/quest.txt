@@ -1,0 +1,9 @@
+~$ python ???.py -first 49 -second 30 -third 0
+
+basic_sentence.py
+곱셈과 나눗셈 --> function
+exception 처리 --> 중간 중단 없음.
+
+출력 print
+
+share github - args_paser : 본인 이름 파일
