@@ -22,7 +22,7 @@ def divide(lst):
     
     if 0 in lst:
         try:
-            any = 1/0
+            return 1/0
         except Exception as e:
             return f"{e}"
     else:
@@ -30,7 +30,7 @@ def divide(lst):
         for i in range(len(lst)):
             now = i
             nxt = (i+1) % len(lst)
-            ret += f"arg[{now}] / arg[{nxt}] = {float(lst[now]/lst[nxt])}\n"
+            ret += f"arg[{now}] / arg[{nxt}] = {float(lst[now]/lst[nxt]):0.4f}\n"
         return ret
 
 if __name__ == '__main__':
