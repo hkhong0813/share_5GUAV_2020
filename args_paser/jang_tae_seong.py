@@ -16,7 +16,7 @@ def divide(x,y,z):
     if x == 0 or y == 0 or z == 0:
         return ZeroDivisionError
     else:
-        return f"x // y = {x//y}\ny // z = {y//z}\nz // x = {z//x}"
+        return f"x / y = {float(x/y)}\ny / z = {float(y/z)}\nz / x = {float(z/x)}"
 
 if __name__ == '__main__':
     print(multi(args.x,args.y,args.z))
