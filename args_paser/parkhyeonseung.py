@@ -29,15 +29,19 @@ if __name__ == '__main__':
         dev123 = devision(first,second,third)
     except TypeError:
         print('put num')
+        pass
     except ZeroDivisionError:
         dev123 = devision(first,second)
+        pass
     except:
         print('error')
+        pass
     finally:
         print('first*second = ',mult_dd)
         print('first*second*third = ',mult_tp)
         print('second/first = ',dev21)
         print('zerodevision error | third:0 > third :1')
         print('first/second/third = ',dev123)
+        pass
 
     pass
