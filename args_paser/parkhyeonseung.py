@@ -21,9 +21,10 @@ if __name__ == '__main__':
     second = float(argvar['y'])
     third = float(argvar['z'])
 
-    mult_dd = multi(first,second)
-    mult_tp = multi(first,second,third)
+    
     try:
+        mult_dd = multi(first,second)
+        mult_tp = multi(first,second,third)
         dev21 = devision(second,first)
         dev123 = devision(first,second,third)
     except TypeError:
