@@ -55,11 +55,21 @@ if __name__ == '__main__':
         print("first * second * third = ", multi(a,b,c))
         print("first / second / third = ", div(a,b,c))
         
-        
+    
+    except ZeroDivisionError:
+        print("ZeroDivisionError 로 0인 변수를 1로 변경하여 재 계산합니다.")
+        if a == 0 :
+            a = 1
+        if b == 0 :
+            b = 1
+        if c == 0 :
+            c = 1
+        print("first * second * third = ", multi(a,b,c))
+        print("first / second / third = ", div(a,b,c))
 
     except Exception as e: 
         print(e, "  라는 오류가 있어요!!!")
-    
+        print(type(e))
 
     finally:
         pass
