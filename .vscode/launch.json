@@ -4,17 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-// <<<<<<< HEAD
-//             "args": ["-f 49","-s 30","-t 0"]
-// =======
-//             "args": ["-first", "49", "-second", "30", "-third", "0"]
-// >>>>>>> 6a2e59265facb78b39796f39995825d339cbe81e
+
+            "args": ["-first", "49", "-second", "30", "-third", "0"]
+
         }
     ]
 }
