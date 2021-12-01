@@ -1,23 +1,38 @@
 import argparse
 
-parser = argparse.ArgumentParser(description="Argparse Tutorial")
+parser = argparse.ArgumentParser()
 
-# args.add_argument('-q','--quit',required=True)
-parser.add_argument('-x', type=int)
-parser.add_argument('-y', type=int)
-parser.add_argument('-z', type=int)
+# 파일명 뒤에 숫자만 입력해도 된다.
+parser.add_argument(nargs="*", type=int, dest="lst_1")
 
-args = parser.parse_args()
+lst = parser.parse_args().lst_1
 
-def multi(x,y,z):
-    return f"x * y = {x*y}\ny * z = {y*z}\nz * x = {z*x}\nx * y * z = {x * y * z}"
+print(lst)
 
-def divide(x,y,z):
-    if x == 0 or y == 0 or z == 0:
-        return ZeroDivisionError
+def multi(lst):
+    
+    ret = f""
+    for i in range(len(lst)):
+        now = i
+        nxt = (i+1) % len(lst)
+        ret += f"arg[{now}] x arg[{nxt}] = {lst[now]*lst[nxt]}\n"
+    return ret
+
+def divide(lst):
+    
+    if 0 in lst:
+        try:
+            return 1/0
+        except Exception as e:
+            return f"{e}"
     else:
-        return f"x / y = {float(x/y)}\ny / z = {float(y/z)}\nz / x = {float(z/x)}"
+        ret = f""
+        for i in range(len(lst)):
+            now = i
+            nxt = (i+1) % len(lst)
+            ret += f"arg[{now}] / arg[{nxt}] = {float(lst[now]/lst[nxt]):0.4f}\n"
+        return ret
 
 if __name__ == '__main__':
-    print(multi(args.x,args.y,args.z))
-    print(divide(args.x,args.y,args.z))
+    print(multi(lst))
+    print(divide(lst))
