@@ -24,7 +24,7 @@ if __name__ == '__main__':
                 a/b
             except ZeroDivisionError as e:
                 pass
-            
+
             return a/b
     
 
@@ -33,11 +33,13 @@ if __name__ == '__main__':
     args = argparse.ArgumentParser()
 
     # args.add_argument('-q','--quit',required=True)
-    args.add_argument('-f','--First',required=True)
-    args.add_argument('-s','--Second',required=True)
-    args.add_argument('-t','--Third',required=True)
+    args.add_argument('-f','--first',required=True,type=int)
+    args.add_argument('-s','--second',required=True,type=int)
+    args.add_argument('-t','--third',required=True)
 
     argvar = vars(args.parse_args())
+    # a = args.parse_args('-f')
+    # b = args.parse_args('-s')
     a=10
     b=20
     print(calculate.multiple(a,b))
