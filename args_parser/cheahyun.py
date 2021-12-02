@@ -15,12 +15,13 @@ def mul():
     
 
 def div():
-    return argvar['second'] / argvar['third']
+    division = int(argvar['second']) / int(argvar['third'])
+    return division
 
 if __name__=='__main__':
     try:
-        print(mul())
-        print(div())
+        multi = mul()
+        division = div()
 
     except ZeroDivisionError as e:
         print(e)

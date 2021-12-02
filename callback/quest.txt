@@ -1,0 +1,7 @@
+* 해 보기
+callback_02.py 흐름 이해
+
+* 더 해 보기
+callback_01.py 완성
+1. function 분리
+2. callback function 만들기
