@@ -19,6 +19,7 @@ if __name__ == '__main__':
         try:
             bytepair = receiver.recvfrom(1024)
             messagefunc(bytepair, msgprint)
+            receiver.sendto(str.encode('ok'),('192.168.16.26', 7778))
             pass
         except :  # 네트워크 접속 불량이면(즉 센더에서 받은게 없으면)
             print("네트워크 접속 불량")
